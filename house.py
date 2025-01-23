@@ -17,7 +17,7 @@ def load_dataset():
     Load the house price dataset.
     """
     cols = ["bedrooms", "bathrooms", "area", "zipcode", "price"]
-    df = pd.read_csv("https://raw.githubusercontent.com/emanhamed/Houses-dataset/master/Houses%20Dataset/HousesInfo.txt", sep=" ", header=None, names=cols)
+    df = pd.read_csv("prices.txt", sep=" ", header=None, names=cols)
     # Convert zip codes to strings and strip whitespace
     df["zipcode"] = df["zipcode"].astype(str).str.strip()
     return df
