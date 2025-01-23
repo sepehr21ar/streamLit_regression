@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 joblib
-sklearn
+scikit-learn
 keras
