@@ -84,6 +84,6 @@ if st.sidebar.button("Predict Price"):
 
 # Display some statistics
 st.subheader("Model Statistics")
-locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+locale.setlocale(locale.LC_ALL, "")
 st.write("**Average House Price:**", locale.currency(df["price"].mean(), grouping=True))
 st.write("**Standard Deviation of House Price:**", locale.currency(df["price"].std(), grouping=True))
