@@ -32,10 +32,10 @@ def load_trained_model():
     Load the trained model and preprocessing tools.
     """
 
-    model = load_model("https://github.com/sepehr21ar/streamLit_regression/blob/main/house_price_model.keras")
-    cs = joblib.load("https://github.com/sepehr21ar/streamLit_regression/blob/main/minmax_scaler.pkl")
-    zipBinarizer = joblib.load("https://github.com/sepehr21ar/streamLit_regression/blob/main/zip_binarizer.pkl")
-    maxPrice = joblib.load("https://github.com/sepehr21ar/streamLit_regression/blob/main/max_price.pkl")
+    model = load_model("house_price_model.keras")
+    cs = joblib.load("minmax_scaler.pkl")
+    zipBinarizer = joblib.load("zip_binarizer.pkl")
+    maxPrice = joblib.load("max_price.pkl")
     zipBinarizer.classes_ = [str(zipcode).strip() for zipcode in zipBinarizer.classes_]
     return model, cs, zipBinarizer, maxPrice
 
