@@ -84,6 +84,10 @@ if st.sidebar.button("Predict Price"):
 
 # Display some statistics
 st.subheader("Model Statistics")
-locale.setlocale(locale.LC_ALL, "")
-st.write("**Average House Price:**", locale.currency(df["price"].mean(), grouping=True))
-st.write("**Standard Deviation of House Price:**", locale.currency(df["price"].std(), grouping=True))
+locale.setlocale(locale.LC_ALL, "")# نمایش میانگین قیمت
+average_price = df["price"].mean()
+st.write(f"**Average House Price:** ${average_price:,.2f}")
+
+# نمایش انحراف معیار
+std_dev_price = df["price"].std()
+st.write(f"**Standard Deviation of House Price:** ${std_dev_price:,.2f}")
